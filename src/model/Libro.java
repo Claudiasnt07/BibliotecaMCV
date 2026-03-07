@@ -22,4 +22,8 @@ public class Libro {
 
         estado = EstadoLibro.DISPONIBLE;
     }
+
+    public boolean disponible() {
+        return copiasDisponibles > 0;
+    }
 }
