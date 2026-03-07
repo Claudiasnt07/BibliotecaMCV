@@ -58,4 +58,12 @@ public class GestorBiblioteca {
 
         prestamos.add(p);
     }
+
+    public List<Libro> getLibros() {
+        return libros;
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
 }
