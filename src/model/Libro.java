@@ -26,4 +26,9 @@ public class Libro {
     public boolean disponible() {
         return copiasDisponibles > 0;
     }
+
+    public void prestar() {
+        copiasDisponibles--;
+        estado = EstadoLibro.PRESTADO;
+    }
 }
