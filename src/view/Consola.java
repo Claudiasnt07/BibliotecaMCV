@@ -12,4 +12,16 @@ public class Consola {
             System.out.println(l);
         }
     }
+
+    public static void mostrarUsuarios(List<Usuario> usuarios) {
+        System.out.println("USUARIOS");
+
+        for (Usuario u : usuarios) {
+            System.out.println(u.getNombre());
+
+            for (Prestamo p : u.getPrestamos()) {
+                System.out.println(" Libro: " + p.getLibro().getTitulo());
+            }
+        }
+    }
 }
