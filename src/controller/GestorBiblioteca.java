@@ -32,4 +32,30 @@ public class GestorBiblioteca {
         }
         return null;
     }
+
+    public void prestarLibro(String isbn, int idUsuario) {
+        Libro libro = buscarLibroPorISBN(isbn);
+        Usuario usuario = null;
+
+        for (Usuario u : usuarios) {
+            if (u.getId() == idUsuario) {
+                usuario = u;
+            }
+        }
+
+        if (libro == null || usuario == null) {
+            throw new RuntimeException("Libro o usuario no encontrado");
+        }
+
+        if (!libro.disponible()) {
+            throw new RuntimeException("Libro no disponible");
+        }
+
+        Prestamo p = new Prestamos(libro, usuario);
+
+        libro.prestar();
+        usuaro.agregarPrestamos(p);
+
+        prestamos.add(p);
+    }
 }
