@@ -36,4 +36,11 @@ public class Libro {
         copiasDisponibles++;
         estado = EstadoLibro.DISPONIBLE;
     }
+
+    public String getIsbn() { return isbn; }
+    public String getTitulo() { return titulo; }
+    public Genero getGenero() { return genero; }
+    public String toString() {
+        return titulo + "-" + autor + " | Estado: " + estado;
+    }
 }
