@@ -8,4 +8,12 @@ public class Prestamo {
 
     private LocalDate fechaPrestamo;
     private LocalDate fechaVencimiento;
+
+    public Prestamo(Libro libro, Usuario usuario) {
+        this.libro = libro;
+        this.usuario = usuario;
+
+        fechaPrestamo = LocalDate.now();
+        fechaVencimiento = fechaPrestamo.plusDays(30);
+    }
 }
