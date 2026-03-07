@@ -15,4 +15,12 @@ public class GestorBiblioteca {
         usuarios = new ArrayList<>();
         prestamos = new ArrayList<>();
     }
+
+    public void agregarLibro(Libro libro) {
+        libros.add(libro);
+    }
+
+    public void agregarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
 }
