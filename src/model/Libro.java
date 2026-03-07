@@ -10,4 +10,16 @@ public class Libro {
     private int copiasDisponibles;
 
     private EstadoLibro estado;
+
+    public Libro(String isbn, String titulo, String autor, Genero genero, int copias) {
+        this.isbn =  isbn;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.genero = genero;
+
+        this.copiasTotales = copias;
+        this.copiasDisponibles = copias;
+
+        estado = EstadoLibro.DISPONIBLE;
+    }
 }
