@@ -31,4 +31,9 @@ public class Libro {
         copiasDisponibles--;
         estado = EstadoLibro.PRESTADO;
     }
+
+    public void devolver() {
+        copiasDisponibles++;
+        estado = EstadoLibro.DISPONIBLE;
+    }
 }
