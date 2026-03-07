@@ -16,4 +16,7 @@ public class Prestamo {
         fechaPrestamo = LocalDate.now();
         fechaVencimiento = fechaPrestamo.plusDays(30);
     }
+
+    public Libro getLibro() { return libro; }
+    public Usuario getUsuario() { return usuario; }
 }
