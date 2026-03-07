@@ -23,4 +23,13 @@ public class GestorBiblioteca {
     public void agregarUsuario(Usuario usuario) {
         usuarios.add(usuario);
     }
+
+    public Libro buscarLibroPorISBN(String isbn) {
+        for (Libro l : libros) {
+            if (l.getIsbn().equals(isbn)) {
+                return l;
+            }
+        }
+        return null;
+    }
 }
