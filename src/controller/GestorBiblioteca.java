@@ -1,14 +1,13 @@
 package controller;
 
-import model.*;
-
 import java.util.ArrayList;
 import java.util.List;
+import model.*;
 
 public class GestorBiblioteca {
     private List<Libro> libros;
     private List<Usuario> usuarios;
-    private List<Prestamos> prestamos;
+    private List<Prestamo> prestamos;
 
     public GestorBiblioteca() {
         libros = new ArrayList<>();
@@ -51,10 +50,10 @@ public class GestorBiblioteca {
             throw new RuntimeException("Libro no disponible");
         }
 
-        Prestamo p = new Prestamos(libro, usuario);
+        Prestamo p = new Prestamo(libro, usuario);
 
         libro.prestar();
-        usuaro.agregarPrestamos(p);
+        usuario.agregarPrestamo(p);
 
         prestamos.add(p);
     }
